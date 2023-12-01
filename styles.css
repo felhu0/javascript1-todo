@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: antiquewhite;
+    padding: 3rem;
+
+}
+
+.my-todos {
+    font-size: 25px;
+    margin: 3rem;
+    
+}
+
+.form {
+    display: flex;
+    margin: 0 1.5rem 1.5rem;
+    gap: 10px;
+}
+
+input {
+    height: 30px;
+    width: 15rem;
+    border-radius: .5rem;
+    border: transparent;
+}
+
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.remove-error-msg {
+    display: none;
+}
+
+.add-error-msg {
+    display: block;
+    color: red;
+}
+
+.todo-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 1rem;
+}
+
+.btn {
+    height: 30px;
+    border-radius: .5rem;
+    background-color: rgb(101, 150, 101);
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    width: fit-content;
+    padding: 5px;
+}
+.btn-add-todo {
+    height: 30px;
+    border-radius: .5rem;
+    border: transparent;
+    cursor: pointer;
+   
+}
+
+li .btn-put-todo {
+    margin-left: 4rem;
+}
+
+.span-fokus {
+    display: block;
+    font-weight: bold;
+    color: rgb(5, 163, 5);
+}
+
+.btn-delete-todo {
+    display: block;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: rgb(5, 163, 5);
+}
+.hidden {
+    display: block;
+    color: rgb(223, 57, 57);
+    cursor: not-allowed;
+}
+
+.btn-put-todo {
+    display: block;
+    background-color: transparent;
+    border: none;
+    
+    
+}
+.fa-regular.fa-square {
+    cursor: pointer;
+    color: rgb(223, 57, 57);
+}
+
+.fa-solid.fa-square-check {
+    display: block;
+    color: rgb(5, 163, 5);
+    cursor: pointer;
+}
+
+.modal-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container-visible {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.div-modal {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
