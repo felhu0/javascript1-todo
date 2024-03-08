@@ -9,7 +9,9 @@ const addErrorMsg = document.querySelector('.add-error-msg');
 const faSolid = document.querySelector('.fa-solid');
 const modalContainer = document.querySelector('.modal-container');
 const closeModalButton = document.querySelector('.modal-close-button');
-const apiKey = '7a62763d-64c1-4883-902b-88863f6582fc'
+// import { API_KEY } from '/api.js';
+
+const apiKey = window.API_KEY
 
 // Hämta Todo-listan från API:et vid sidans laddning
 let todos = []
@@ -107,7 +109,7 @@ async function addNewTodo() {
     };
 
     try {
-        const res = await fetch('https://js1-todo-api.vercel.app/api/todos?apikey=7a62763d-64c1-4883-902b-88863f6582fc', {
+        const res = await fetch(`https://js1-todo-api.vercel.app/api/todos?apikey=${apiKey}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -146,7 +148,7 @@ async function deleteTodo(todoId) {
     }
     
     try {
-        const res = await fetch(`https://js1-todo-api.vercel.app/api/todos/${todoId}?apikey=7a62763d-64c1-4883-902b-88863f6582fc`, {
+        const res = await fetch(`https://js1-todo-api.vercel.app/api/todos/${todoId}?apikey=${apiKey}`, {
             method: 'DELETE'
         });
 
@@ -182,7 +184,7 @@ async function putTodo(todoId) {
         completed: !todo.completed
     }
     try {
-        const res = await fetch(`https://js1-todo-api.vercel.app/api/todos/${todoId}?apikey=7a62763d-64c1-4883-902b-88863f6582fc`, {
+        const res = await fetch(`https://js1-todo-api.vercel.app/api/todos/${todoId}?apikey=${apiKey}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
