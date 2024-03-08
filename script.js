@@ -9,13 +9,14 @@ const addErrorMsg = document.querySelector('.add-error-msg');
 const faSolid = document.querySelector('.fa-solid');
 const modalContainer = document.querySelector('.modal-container');
 const closeModalButton = document.querySelector('.modal-close-button');
+const apiKey = '7a62763d-64c1-4883-902b-88863f6582fc'
 
 // Hämta Todo-listan från API:et vid sidans laddning
 let todos = []
 window.addEventListener('load', async () => {
     
     try {
-        const res = await fetch('https://js1-todo-api.vercel.app/api/todos?apikey=7a62763d-64c1-4883-902b-88863f6582fc');
+        const res = await fetch(`https://js1-todo-api.vercel.app/api/todos?apikey=${apiKey}`);
         console.log(res)
 
         if(res.status !== 200) {
