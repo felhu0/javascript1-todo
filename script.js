@@ -9,9 +9,9 @@ const addErrorMsg = document.querySelector('.add-error-msg');
 const faSolid = document.querySelector('.fa-solid');
 const modalContainer = document.querySelector('.modal-container');
 const closeModalButton = document.querySelector('.modal-close-button');
-// import { API_KEY } from '/api.js';
 
-const apiKey = window.API_KEY
+
+const apiKey = '7a62763d-64c1-4883-902b-88863f6582fc'
 
 // Hämta Todo-listan från API:et vid sidans laddning
 let todos = []
